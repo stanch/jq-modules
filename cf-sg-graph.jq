@@ -1,3 +1,15 @@
+module {
+  "name": "cf-sg-graph",
+  "description": "produce a JSON Graph representation of the security rules found in a given CloudFormation template",
+  "homepage": "https://github.com/stanch/jq-modules#readme",
+  "license": "MIT",
+  "author": "Nick",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stanch/jq-modules.git"
+  }
+};
+
 # Generic map for JSON
 def fmap(f):
   if type == "object" then map_values(f) else if type == "array" then map(f) else . end end;
